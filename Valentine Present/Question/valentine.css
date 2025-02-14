@@ -1,0 +1,61 @@
+body {
+    overflow: hidden;
+}
+.Picture1 {
+    width: 10%;
+    height: 10%;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+.Text {
+    font-family: "Indie Flower", serif;
+    position: relative;
+    margin: 0 auto; 
+    justify-content: center;
+    display: flex;
+    top: 6vh;
+    overflow: hidden;
+}
+.Button-Box {
+    position: relative;
+    margin: 0 auto;
+    justify-content: center;
+    display: flex;
+    top: 20vh;
+}
+.Yes {
+    font-family: "Indie Flower", serif;
+    font-size: 15px;
+    position: relative;
+    width: 24vh;
+    height: 12vh;
+    right: 2%;
+    background-color: lime;
+    transition: transform ease-in-out 0.2s;
+    border: 1px solid black;
+    border-radius: 30px;
+    z-index: 100;
+    cursor: pointer;
+}
+.No {
+    font-family: "Indie Flower", serif;
+    font-size: 15px;
+    background-color: red;
+    position: relative;
+    width: 24vh;
+    height: 12vh;  
+    left: 2%;
+    transition: transform ease-in-out 0.2s;    
+    border: 1px solid black;
+    border-radius: 30px;
+    z-index: 100;
+    cursor: pointer;
+}
+.Yes:hover {
+    transform: scale(0.95);
+}
+.No:hover {
+    transform: scale(0.95);
+}

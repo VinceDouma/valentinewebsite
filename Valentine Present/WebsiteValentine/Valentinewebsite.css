@@ -1,0 +1,283 @@
+body {
+    background-color: black;
+    overflow: hidden;
+}
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -100;
+    min-width: 100%;
+    min-height: 100%;
+    width: 1300px;
+    overflow-y: none;
+    transition: 1s;
+    user-select: none;
+    opacity: 0;
+  }
+.fade-in {
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+}
+  
+.fade-in-active {
+    opacity: 1; 
+}
+
+.Thank {
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    margin-top: 10%;
+    animation: Thank 3s forwards ease-in-out;
+    animation-delay: 2s;
+    color: pink;
+    opacity: 0;
+}
+@keyframes Thank {
+    0% {transform: translateY(-30vh);}
+    
+    50% {transform: translateY(0);
+    opacity: 1;}
+    
+    75% {transform: translateY(0);
+        opacity: 0.6;}
+    
+    100% {transform: translateY(30vh);
+    opacity: 0;}
+}
+
+/*Buttons*/
+
+#btn {
+    position: relative;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    margin-top: -10%;
+    display: block;
+    justify-content: center;
+    margin: 5% auto;
+    border-radius: 8px;
+    font-size: 117%;
+    font-weight: 500;
+    color: #ffffff80;
+    text-shadow: none;
+    background: transparent;
+    cursor: pointer;
+    box-shadow: transparent;
+    border: 1px solid #ffffff80;
+    transition: 0.5s ease;
+    width: 30%;
+    user-select: none;
+    animation: btnani 3s forwards ease-in-out;
+    animation-delay: 1s;
+    opacity: 0;
+    z-index: 2;
+  }
+  #btn.visible {
+    animation-delay: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+  
+  #btn:hover,
+  :focus {
+    color: #ffffff;
+    background: rgb(251, 124, 196);
+    border: 1px solid #ff257e;
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+    box-shadow: 0 0 5px #ff2644, 0 0 20px #ff2644, 0 0 50px #ff2644,
+      0 0 100px #ff2644;
+  }
+  @keyframes btnani {
+    0% {opacity: 0;
+    transform: translateY(-30vh);}
+    100% {opacity: 1;}
+  }
+
+  
+  .countdown-container {
+    position: relative;
+    opacity: 0;
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: transparent;
+    border: solid 1px #ffffff80;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.5s ease;
+    width: 42%;
+    justify-content: center;
+    margin: 0 auto;
+    align-items: center;
+    z-index: 1;
+}
+
+.time-segment {
+    text-align: center;
+}
+
+.number {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: transparent;
+    padding: 1rem;
+    border-radius: 5px;
+    min-width: 100px;
+}
+
+.label {
+    margin-top: 0.5rem;
+    color: #ccc;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.Anniversary {
+    
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.visible {
+    opacity: 1 !important;
+}
+
+#returnBtn {
+    position: fixed;
+    display: none;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    margin-top: -20vh;
+    border-radius: 8px;
+    font-size: 117%;
+    font-weight: 500;
+    color: #ffffff80;
+    text-shadow: none;
+    background: transparent;
+    cursor: pointer;
+    box-shadow: transparent;
+    border: 1px solid #ffffff80;
+    transition: 0.5s ease;
+    user-select: none;
+    z-index: 2;
+    align-self: first baseline;
+}
+#returnBtn:hover,:focus {
+    color: #ffffff;
+    background: rgb(251, 124, 196);
+    border: 1px solid #ff257e;
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+    box-shadow: 0 0 5px #ff2644, 0 0 20px #ff2644, 0 0 50px #ff2644,
+      0 0 100px #ff2644;
+}
+.btn:not(.initialized) {
+    animation: btnAppear 0.5s ease forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+
+.btn.initialized {
+    animation: none !important;
+    opacity: 1 !important;
+}
+
+
+
+
+
+
+/*50 thing I love about you*/
+#hiddenDiv {
+    position: absolute;
+    display: none; 
+    padding: 15px;
+    background-color: transparent;
+    border: 1px solid #ffffff80;
+    border-radius: 5px;
+    color: #ffffff80; 
+    text-align: center; 
+    width: 97%; 
+    margin: 0 auto; 
+    margin-top: -6vh;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    overflow-y: auto;
+    height: 80vh;
+    font-size: 200%;
+}
+ 
+  #hiddenDiv::-webkit-scrollbar {
+    width: 10px; 
+}
+#hiddenDiv::-webkit-scrollbar-track {
+    background: transparent; 
+}
+#hiddenDiv::-webkit-scrollbar-thumb {
+    background: rgba(128, 128, 128, 0.5); 
+    border-radius: 5px; 
+}
+#hiddenDiv::-webkit-scrollbar-thumb:hover {
+    background: rgba(128, 128, 128, 0.8); 
+}
+#hiddenDiv {
+    scrollbar-width: thin; 
+    scrollbar-color: rgba(128, 128, 128, 0.5) transparent; 
+}
+
+/*my feelings for you*/
+.Titel {
+    color: #ccc;
+}
+.Text {
+    color: #ccc;
+    font-size: 70%;
+}
+#hiddenDiv2 {
+    position: absolute;
+    display: none; 
+    padding: 15px;
+    background-color: transparent;
+    border: 1px solid #ffffff80;
+    border-radius: 5px;
+    color: #ffffff80; 
+    text-align: center; 
+    width: 97%; 
+    margin: 0 auto;
+    margin-top: -6vh;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    overflow-y: auto;
+    height: 80vh;
+    font-size: 200%;
+}
+
+#hiddenDiv2::-webkit-scrollbar {
+    width: 10px; 
+}
+#hiddenDiv2::-webkit-scrollbar-track {
+    background: transparent; 
+}
+#hiddenDiv2::-webkit-scrollbar-thumb {
+    background: rgba(128, 128, 128, 0.5); 
+    border-radius: 5px; 
+}
+#hiddenDiv2::-webkit-scrollbar-thumb:hover {
+    background: rgba(128, 128, 128, 0.8); 
+}
+#hiddenDiv2 {
+    scrollbar-width: thin; 
+    scrollbar-color: rgba(128, 128, 128, 0.5) transparent; 
+}
